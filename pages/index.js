@@ -43,9 +43,7 @@ function App() {
           onEntering={onEnter}
           unmountOnExit
         >
-          <div className="page">
-            <Home />
-          </div>
+          <Home />
         </CSSTransition>
       </div>
     </>
