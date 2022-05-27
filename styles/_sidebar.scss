@@ -1,5 +1,5 @@
 .sidebar {
-    width: 20vw;
+    width: max(20vw, 255px);
     height: 100vh;
     background-color: $bg-second-color;
     font-family: 'Oswald', sans-serif;
@@ -85,7 +85,7 @@
 .switch {
     position: absolute;
     top: 2%;
-    right: 5%;
+    left: 5%;
     display: inline-block;
     width: 60px;
     height: 34px;
@@ -95,16 +95,11 @@
         width: 0;
         height: 0;
 
-        &:checked {
-            
-            .slider {
-                background-color: #2196F3;
-            }
-            .slide::before {
-                -webkit-transform: translateX(26px);
-                -ms-transform: translateX(26px);
+        &:checked + .slider {
+
+            background-color: #2196F3;
+            &::before {
                 transform: translateX(26px);
-                border-radius: 50%;
             }
         }
     }
@@ -132,6 +127,7 @@
         background-color: white;
         -webkit-transition: .4s;
         transition: .4s;
+        border-radius: 50%;
     }
 }
 

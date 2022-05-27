@@ -7,7 +7,9 @@
   },
   "dependencies": {
     "gsap": "^3.0.1",
+    "install": "^0.13.0",
     "next": "latest",
+    "npm": "^8.11.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-transition-group": "^4.3.0",

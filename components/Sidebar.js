@@ -1,44 +1,30 @@
-import Image from "next/image"
+import items from "../data-json/sidebar-items.json";
 
-const items = [
-    {
-        name: 'Home',
-        link: '#'
-    },
-    {
-        name: 'Education',
-        link: '#'
-    },
-    {
-        name: 'Projects',
-        link: '#'
-    },
-    {
-        name: 'About Me',
-        link: '#'
-    },
-    {
-        name: 'Contact',
-        link: '#'
-    },
-]
+const Sidebar = ({ isDarkMode, setIsDarkMode }) => {
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
-const Sidebar = () => {
   return (
     <div className="sidebar">
-        <label class="switch">
-            <input type="checkbox" checked />
-            <span class="slider round"></span>
-        </label>
-        <ul>
-            {
-                items.map((item, index) => (
-                    <li key={index} style={{ zIndex: items.length - index }}><a href={item.link}>{ item.name }</a></li>
-                ))
-            }
-        </ul>
+      <label class="switch" htmlFor="dark-mode">
+        <input
+          type="checkbox"
+          id="dark-mode"
+          onClick={toggleTheme}
+          defaultChecked={isDarkMode}
+        />
+        <span class="slider"></span>
+      </label>
+      <ul>
+        {items.map((item, index) => (
+          <li key={index} style={{ zIndex: items.length - index }}>
+            <a href={item.link}>{item.name}</a>
+          </li>
+        ))}
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

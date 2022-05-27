@@ -1,6 +1,13 @@
+@import './mixins';
+
 .content {
     flex: 1;
     height: 100vh;
     overflow: auto;
     background: $bg-primary-color;
+    
+    @include theme() {
+        color: theme-get('text-color');
+        background-color: theme-get('bg-color');
+    }
 }
