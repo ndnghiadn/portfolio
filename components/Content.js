@@ -4,6 +4,7 @@ import Title from './Title'
 
 const Content = () => {
   let line1 = useRef(null)
+
   useEffect(() => {
     gsap.from([line1], 0.6, {
       delay: 0.9,
@@ -17,24 +18,37 @@ const Content = () => {
 
   return (
     <div className="content">
-      <Title lineContent="With-GSAP" lineContent2="Using NEXT" />
+
+      <section id="#" className="section">
+        <Title lineContent="With-GSAP" lineContent2="Using NEXT" />
+        
+        <p ref={(el) => (line1 = el)} className="line">
+          A Simple example using{' '}
+          <a
+            href="https://greensock.com/gsap/"
+            style={{ fontWeight: 'bold', textDecoration: 'none' }}
+          >
+            GSAP
+          </a>{' '}
+          &{' '}
+          <a
+            href="https://www.npmjs.com/package/react-transition-group"
+            style={{ fontWeight: 'bold', textDecoration: 'none' }}
+          >
+            react-transition-group
+          </a>
+        </p>
+      </section>
+      <section id="education" className="section">
+        abc
+      </section>
+      <section id="projects" className="section">
+        xyz
+      </section>
+      <section id="certifications" className="section">
+        qwe
+      </section>
       
-      <p ref={(el) => (line1 = el)} className="line">
-        A Simple example using{' '}
-        <a
-          href="https://greensock.com/gsap/"
-          style={{ fontWeight: 'bold', textDecoration: 'none' }}
-        >
-          GSAP
-        </a>{' '}
-        &{' '}
-        <a
-          href="https://www.npmjs.com/package/react-transition-group"
-          style={{ fontWeight: 'bold', textDecoration: 'none' }}
-        >
-          react-transition-group
-        </a>
-      </p>
     </div>
   )
 }

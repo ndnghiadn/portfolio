@@ -1,22 +1,22 @@
 [
     {
-        "name": "Home",
-        "link": "#"
-    },
-    {
-        "name": "Education",
-        "link": "#"
-    },
-    {
-        "name": "Projects",
-        "link": "#"
-    },
-    {
         "name": "About Me",
         "link": "#"
     },
     {
+        "name": "Education",
+        "link": "#education"
+    },
+    {
+        "name": "Projects",
+        "link": "#projects"
+    },
+    {
+        "name": "Certifications",
+        "link": "#certifications"
+    },
+    {
         "name": "Contact",
-        "link": "#"
+        "link": "#contact"
     }
 ]

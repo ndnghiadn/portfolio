@@ -1,16 +1,15 @@
-$themes: (
-  darkTheme: (
-    'text-color': white,
-    'bg-color': #424242
-  ),
-  lightTheme: (
-    'text-color': black,
-    'bg-color': #999,
-  )
-);
+$main-text-color: black;
+$main-bg-color: #999;
+$darkmode-text-color: white;
+$darkmode-bg-color: #424242;
 
-$main-color: #FFFFFF;
-$second-color: #999;
-$text-color: #999;
-$bg-primary-color: #999;
-$bg-second-color: #434750;
+$themes: (
+  lightTheme: (
+    'text-color': $main-text-color,
+    'bg-color': $main-bg-color,
+  ),
+  darkTheme: (
+    'text-color': $darkmode-text-color,
+    'bg-color': $darkmode-bg-color,
+  ),
+);

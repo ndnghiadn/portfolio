@@ -1,7 +1,7 @@
 .sidebar {
     width: max(20vw, 255px);
     height: 100vh;
-    background-color: $bg-second-color;
+    background-color: #434750;
     font-family: 'Oswald', sans-serif;
     display: flex;
     flex-direction: column;
@@ -51,7 +51,7 @@
 
             &:hover {
                 background: #33a3ee;
-                transform: translateX(5vw);
+                transform: translateX(2vw);
 
                 &::before {
                     background: #1f5378;
@@ -72,7 +72,7 @@
             a {
                 width: 100%;
                 text-decoration: none;
-                color: $text-color;
+                color: $main-bg-color;
                 display: block;
                 text-transform: uppercase;
                 letter-spacing: 0.05em;
@@ -97,7 +97,7 @@
 
         &:checked + .slider {
 
-            background-color: #2196F3;
+            background-color: $darkmode-bg-color;
             &::before {
                 transform: translateX(26px);
             }
@@ -112,7 +112,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: $main-bg-color;
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 34px;

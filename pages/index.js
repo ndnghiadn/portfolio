@@ -1,6 +1,7 @@
 import { CSSTransition } from 'react-transition-group'
 import { gsap } from 'gsap'
 import Home from '../components/Home'
+import Head from 'next/head'
 
 function App() {
   const onEnter = (node) => {
@@ -34,6 +35,11 @@ function App() {
 
   return (
     <>
+      <Head>
+        <title>{'<MyPortfolio />'}</title>
+        <meta name="description" content="" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="container">
         <CSSTransition
           in={true}
