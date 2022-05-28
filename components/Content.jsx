@@ -19,8 +19,8 @@ const Content = () => {
   return (
     <div className="content">
 
-      <section id="#" className="section">
-        <Title lineContent="With-GSAP" lineContent2="Using NEXT" />
+      <section className="section">
+        <Title lineContent="Nghia Nguyen" lineContent2="Frontend WebDev" />
         
         <p ref={(el) => (line1 = el)} className="line">
           A Simple example using{' '}
@@ -40,13 +40,16 @@ const Content = () => {
         </p>
       </section>
       <section id="education" className="section">
-        abc
+        education
+      </section>
+      <section id="career" className="section">
+        career
       </section>
       <section id="projects" className="section">
-        xyz
+        projects
       </section>
-      <section id="certifications" className="section">
-        qwe
+      <section id="contact" className="section">
+        contact
       </section>
       
     </div>

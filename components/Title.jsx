@@ -7,8 +7,9 @@ const Title = ({ lineContent, lineContent2 }) => {
   useEffect(() => {
     gsap.from([line1, line2], 0.8, {
       delay: 0.8,
-      ease: 'power3.out',
+      ease: 'power3.ease',
       y: 64,
+      opacity: 0,
       stagger: {
         amount: 0.15,
       },
@@ -17,7 +18,7 @@ const Title = ({ lineContent, lineContent2 }) => {
   return (
     <h1 className="page-title">
       <div className="line-wrap">
-        <div ref={(el) => (line1 = el)} className="line">
+        <div ref={(el) => (line1 = el)} className="line" style={{ opacity: 1 }}>
           {lineContent}
         </div>
       </div>

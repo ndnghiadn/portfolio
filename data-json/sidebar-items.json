@@ -1,22 +1,27 @@
 [
     {
         "name": "About Me",
-        "link": "#"
+        "link": "#",
+        "icon": "grid-outline"
     },
     {
         "name": "Education",
-        "link": "#education"
+        "link": "#education",
+        "icon": "book-outline"
+    },
+    {
+        "name": "Career",
+        "link": "#career",
+        "icon": "briefcase-outline"
     },
     {
         "name": "Projects",
-        "link": "#projects"
-    },
-    {
-        "name": "Certifications",
-        "link": "#certifications"
+        "link": "#projects",
+        "icon": "folder-open-outline"
     },
     {
         "name": "Contact",
-        "link": "#contact"
+        "link": "mailto: ndnghiadn@gmail.com",
+        "icon": "mail-outline"
     }
 ]

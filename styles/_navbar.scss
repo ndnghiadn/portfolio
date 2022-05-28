@@ -1,0 +1,124 @@
+
+.navbar {
+    display: none;
+    width: 100vw;
+    height: 70px;
+    background: #434750;
+    font-family: 'Oswald', sans-serif;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    ul {
+        display: flex;
+        width: 100%;
+    }
+}
+
+.indicator {
+    position: absolute;
+    top: -50%;
+    width: 20vw;
+    height: 70px;
+    background: $darkmode-bg-color;
+    border-radius: 50%;
+    border: 6px solid $main-bg-color;
+    transition: 0.5s;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 51%;
+        left: -20px;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border-top-right-radius: 20px;
+        box-shadow: 0px -10px 0 0 $main-bg-color;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border-top-left-radius: 20px;
+        box-shadow: 0px -10px 0 0 $main-bg-color;
+    }
+}
+
+.navbar--list {
+    position: relative;
+    list-style: none;
+    width: 20vw;
+    height: 70px;
+    z-index: 1;
+
+    &:nth-child(1).active ~ .indicator {
+        transform: translateX(calc(20vw * 0));
+    }
+    &:nth-child(2).active ~ .indicator {
+        transform: translateX(calc(20vw * 1));
+    }
+    &:nth-child(3).active ~ .indicator {
+        transform: translateX(calc(20vw * 2));
+    }
+    &:nth-child(4).active ~ .indicator {
+        transform: translateX(calc(20vw * 3));
+    }
+    &:nth-child(5).active ~ .indicator {
+        transform: translateX(calc(20vw * 4));
+    }
+
+    a {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    &.active {
+        
+        .navbar--list_icon {
+            transform: translateY(-35px);
+            color: white;
+        }
+        .navbar--list_text {
+            opacity: 1;
+            transform: translateY(10px);
+        }
+    }
+}
+
+.navbar--list_icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: $main-text-color;
+}
+
+.navbar--list_text {
+    position: absolute;
+    color: $darkmode-text-color;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}

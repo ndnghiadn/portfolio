@@ -8,7 +8,7 @@
 
 .section {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
     @include theme() {
         color: theme-get('text-color');
@@ -20,13 +20,14 @@
 // scrollbar
 ::-webkit-scrollbar {
     width: 1em;
+    @include theme() {
+        background-color: theme-get('bg-color');
+    }
 }
   
   /* Track */
 ::-webkit-scrollbar-track {
-    @include theme() {
-        background-color: theme-get('bg-color');
-    }
+    margin: 0.5em 0;
 }
   
   /* Handle */

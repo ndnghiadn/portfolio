@@ -1,6 +1,7 @@
 import Content from './Content'
 import Sidebar from './Sidebar'
 import { useState, useEffect } from 'react'
+import Navbar from './Navbar'
 
 const Home = () => {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -16,8 +17,9 @@ const Home = () => {
 
   return (
     <div className={`inner ${isDarkMode ? 'darkTheme' : 'lightTheme'}`}>
-      <Sidebar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
+      <Sidebar className="isDesktop" isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
       <Content />
+      <Navbar className="isMobile"/>
     </div>
   )
 }
