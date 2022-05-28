@@ -3,12 +3,20 @@ import { gsap } from 'gsap'
 import Title from './Title'
 
 const Content = () => {
+
   let line1 = useRef(null)
 
   useEffect(() => {
+    gsap.registerPlugin(require('gsap/ScrollTrigger'))
     gsap.from([line1], 0.6, {
-      delay: 0.9,
-      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: [line1],
+        start: '2vh 80%',
+        end: 'bottom 10vh',
+        toggleActions: "restart pause restart pause",
+      },
+      delay: 0.3,
+      ease: 'power3.easeInOut',
       y: 24,
       stagger: {
         amount: 0.15,
@@ -20,8 +28,12 @@ const Content = () => {
     <div className="content">
 
       <section className="section">
-        <Title lineContent="Nghia Nguyen" lineContent2="Frontend WebDev" />
+
+        {/* <Title lineContent="Nghia Nguyen" lineContent2="Frontend WebDev" /> */}
         
+      </section>
+      <section id="education" className="section">
+        education
         <p ref={(el) => (line1 = el)} className="line">
           A Simple example using{' '}
           <a
@@ -38,9 +50,6 @@ const Content = () => {
             react-transition-group
           </a>
         </p>
-      </section>
-      <section id="education" className="section">
-        education
       </section>
       <section id="career" className="section">
         career

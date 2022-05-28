@@ -3,7 +3,6 @@
 .content {
     flex: 1;
     height: 100vh;
-    overflow: auto;
 }
 
 .section {
@@ -14,30 +13,4 @@
         color: theme-get('text-color');
         background-color: theme-get('bg-color');
     }
-}
-
-
-// scrollbar
-::-webkit-scrollbar {
-    width: 1em;
-    @include theme() {
-        background-color: theme-get('bg-color');
-    }
-}
-  
-  /* Track */
-::-webkit-scrollbar-track {
-    margin: 0.5em 0;
-}
-  
-  /* Handle */
-::-webkit-scrollbar-thumb {
-    background: #434750;
-    border-radius: 100vw;
-    border: 0.2em solid #ffffff;
-}
-  
-  /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #33a3ee;
 }
