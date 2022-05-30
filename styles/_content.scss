@@ -3,14 +3,16 @@
 .content {
     flex: 1;
     height: 100vh;
+    position: relative;
+
 }
 
-.section {
-    width: 100%;
-    height: 100vh;
+// .section {
+//     width: 100%;
+//     height: 100vh;
 
-    @include theme() {
-        color: theme-get('text-color');
-        background-color: theme-get('bg-color');
-    }
-}
+//     @include theme() {
+//         color: theme-get('text-color');
+//         background-color: theme-get('bg-color');
+//     }
+// }
