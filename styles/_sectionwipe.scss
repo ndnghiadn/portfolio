@@ -21,6 +21,37 @@
     &.bg {
         background: #434750;
         background-size: cover;
+
+        .arrow-down {
+          position: absolute;
+          bottom: 1em;
+          font-size: 2em;
+
+          a {
+            padding-top: 60px;
+            text-decoration: none;
+            color: #fff;
+
+            &:hover {
+              opacity: .5;
+            }
+
+            span {
+              position: absolute;
+              bottom: 2em;
+              left: 50%;
+              width: 24px;
+              height: 24px;
+              margin-left: -12px;
+              border-left: 1px solid #fff;
+              border-bottom: 1px solid #fff;
+              -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+              box-sizing: border-box;
+            }
+          }
+
+        }
     }
   }
 }

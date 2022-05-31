@@ -22,6 +22,9 @@ const SectionWipe = () => {
                 >
                 <section className="panel bg">
                     <img src="https://en.bloggif.com/tmp/e4014c30bae9d260a233e34fef7328dc/text.gif" alt="Hi" />
+                    <div className="arrow-down">
+                        <a href="#aboutme"><span></span>Scroll</a>
+                    </div>
                 </section>
                 </Tween>
             </Timeline>

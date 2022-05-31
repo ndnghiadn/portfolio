@@ -3,7 +3,7 @@ import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineTwitter } from 'react-icons/ai'
 
-const AboutMe = ({ id, className }) => {
+const AboutMe = ({ className }) => {
 
   let title = useRef(null)
   let desc = useRef(null)
@@ -80,15 +80,17 @@ const AboutMe = ({ id, className }) => {
   }, [])
 
   return (
-    <section id={id} className={className}>
+    <section id="aboutme" className={className}>
       <div className='AboutMe--container'>
         <div className="info">
           <h2 ref={(el) => (title = el)} className="title">About Me</h2>
           <p ref={(el) => (desc = el)} className="desc">I'm Nghia Nguyen also known as ndnghiadn.<br></br>My goals are to become a full-stack developer, build pratical web and mobile applications.</p>
           <div ref={(el) => (icons = el)} className="icons">
-            <AiOutlineGithub />
-            <AiOutlineLinkedin />
-            <AiOutlineTwitter />
+            <ul>
+              <li><a href="https://github.com/ndnghiadn" target="_blank"><AiOutlineGithub /></a></li>
+              <li><a href="https://www.linkedin.com/in/ndnghiadn/" target="_blank"><AiOutlineLinkedin /></a></li>
+              <li><a href="https://twitter.com/ndnghiadn" target="_blank"><AiOutlineTwitter /></a></li>
+            </ul>
           </div>
         </div>
         <div className="avatar">
