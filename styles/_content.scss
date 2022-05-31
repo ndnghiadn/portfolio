@@ -1,4 +1,4 @@
-@import './mixins';
+
 
 .content {
     flex: 1;
@@ -7,12 +7,8 @@
 
 }
 
-// .section {
-//     width: 100%;
-//     height: 100vh;
-
-//     @include theme() {
-//         color: theme-get('text-color');
-//         background-color: theme-get('bg-color');
-//     }
-// }
+.section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
