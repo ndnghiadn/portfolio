@@ -3,7 +3,9 @@ import React from 'react'
 const Education = () => {
   return (
         <div className="Education--container">
-          Education
+          <div className="content">
+            <h1>EDUCATION</h1>
+          </div>
         </div>
   )
 }

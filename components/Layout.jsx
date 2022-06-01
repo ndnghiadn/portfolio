@@ -17,8 +17,8 @@ const Layout = ({ children }) => {
   return (
     <div className={`inner ${isDarkMode ? 'darkTheme' : 'lightTheme'}`}>
       <Sidebar className="isDesktop" isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
-      { children }
       <Navbar className="isMobile"/>
+      { children }
     </div>
   )
 }
