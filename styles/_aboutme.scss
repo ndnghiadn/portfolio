@@ -2,7 +2,7 @@
 
 .AboutMe--container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -35,6 +35,7 @@
         img {
             width: 30vw;
             border-radius: 50%;
+            opacity: 0;
         }
     }
     
@@ -42,15 +43,18 @@
     .title {
         display: block;
         font-size: 2.7em;
+        opacity: 0;
     }
 
     .desc {
         display: block;
+        opacity: 0;
     }
 
     .icons {
         font-size: 2em;
         margin-top: 0.5em;
+        opacity: 0;
 
         ul {
             display: flex;
@@ -67,6 +71,102 @@
                 }
             }
         }
+}
+
+    $size: 1em;
+    $speed: 3s;
+    $peakopacity:0.7;
+    @keyframes arrows {
+        0% {
+            border-left:$size/3 solid rgba(0,0,0,0);
+            border-bottom:$size/3 solid rgba(0,0,0,0);
+            transform:translate($size/-6,$size*4/-6)rotate(-45deg) ;
+        }
+        10%, 90% {
+            border-left:$size/3 solid rgba(0,0,0,0);
+            border-bottom:$size/3 solid rgba(0,0,0,0);
+        }
+        50% {
+            border-left:$size/3 solid rgba(0,0,0,$peakopacity);
+            border-bottom:$size/3 solid rgba(0,0,0,$peakopacity);
+            transform:translate($size/-6,0px)rotate(-45deg) ;
+        }
+        100% {
+            border-left:$size/3 solid rgba(0,0,0,0);
+            border-bottom:$size/3 solid rgba(0,0,0,0);
+            transform:translate($size/-6,$size*4/6)rotate(-45deg) ;
+        }
     }
 
+    .arrow-down {
+        position: absolute;
+        bottom: 5vh;
+        display: block;
+        cursor: pointer;
+        opacity: 0;
+
+        .arrows {
+            position: absolute;
+            top:50%;
+            left:50%;
+            width:$size;
+            height:$size;
+            transform:translate(-50%,-50%);
+
+            &:before {
+                content: '';
+                position: absolute;
+                width:100%;
+                height:100%;
+                border-left:$size/3 solid rgba(0,0,0,$peakopacity);
+                border-bottom:$size/3 solid rgba(0,0,0,$peakopacity);
+                transform:translate($size/3,$size*4/3)rotate(-45deg);
+                animation: arrows $speed linear infinite;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width:100%;
+                height:100%;
+                border-left:$size/3 solid rgba(0,0,0,$peakopacity);
+                border-bottom:$size/3 solid rgba(0,0,0,$peakopacity);
+                transform:translate($size*2/3,0px)rotate(-45deg) ;
+                animation: arrows $speed linear infinite $speed/-2;
+            }
+        }
+    }
+}
+
+.sticky, .sticky2 {
+    height: 100vh;
+    @include theme() {
+        background-color: theme-get('bg-color');
+    }
+    width: 100%;
+    max-height: 100vh;
+    & .animation, .animation2 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        & svg {
+        opacity: 1;
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        }
+    }
+    .heading {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        h2 {
+            font-size: 2.7em;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            margin: 0;
+        }
+    }
 }

@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Poppins:300,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
+@import './styles/mixins';
 @import './styles/libs';
 @import './styles/variables';
 @import './styles/content';
 @import './styles/sidebar';
 @import './styles/responsive';
 @import './styles/navbar';
-@import './styles/career';
-@import './styles/sectionwipe';
 @import './styles/aboutme';
+@import './styles/education';
+@import './styles/career';
+@import './styles/projects';
+@import './styles/contact';
 
 * {
   margin: 0;
@@ -18,7 +21,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   font-family: 'Oswald', 'Bebas', sans-serif;
 }
 
@@ -56,5 +59,6 @@ html {
   .inner {
     display: flex;
     max-height: 100vh;
+    background-color: #999;
   }
 }

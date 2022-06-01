@@ -9,6 +9,7 @@
     "gsap": "^3.10.4",
     "install": "^0.13.0",
     "next": "latest",
+    "nextjs-progressbar": "^0.0.14",
     "npm": "^8.11.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

@@ -1,9 +1,17 @@
+import Link from "next/link";
 import items from "../data-json/sidebar-items.json";
 
-const Sidebar = ({ isDarkMode, setIsDarkMode, className }) => {
+const Sidebar = ({ isDarkMode, setIsDarkMode, className, refs }) => {
+
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
+
+  const handleNavigate = (item) => {
+    // refs[1].current.scrollIntoView()
+    // console.log('ref', refs[0])
+    // console.log('im here')
+  }
 
   return (
     <>
@@ -19,8 +27,10 @@ const Sidebar = ({ isDarkMode, setIsDarkMode, className }) => {
         </label>
         <ul>
           {items.map((item, index) => (
-            <li key={index} style={{ zIndex: items.length - index }}>
-              <a href={item.link}>{item.name}</a>
+            <li key={index} style={{ zIndex: items.length - index }} onClick={handleNavigate(item)}>
+              <Link href={item.link}>
+                <a>{item.name}</a>
+              </Link>
             </li>
           ))}
         </ul>

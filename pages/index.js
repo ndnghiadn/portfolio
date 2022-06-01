@@ -1,7 +1,8 @@
 import { CSSTransition } from 'react-transition-group'
 import { gsap } from 'gsap'
-import Home from '../components/Home'
+import Layout from '../components/Layout'
 import Head from 'next/head'
+import AboutMe from '../components/AboutMe'
 
 function App() {
   const onEnter = (node) => {
@@ -53,7 +54,11 @@ function App() {
           onEntering={onEnter}
           unmountOnExit
         >
-          <Home />
+          <Layout>
+            <div className="content">
+              <AboutMe />
+            </div>
+          </Layout>
         </CSSTransition>
       </div>
     </>
