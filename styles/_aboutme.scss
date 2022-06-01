@@ -5,7 +5,7 @@
     height: 100vh;
     position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
     @include theme() {
@@ -16,7 +16,7 @@
     .info {
         display: block;
         position: relative;
-        width: 20vw;
+        width: 30vw;
     }
 
     .avatar {

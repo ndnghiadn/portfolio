@@ -19,3 +19,27 @@
         margin-left: 25vw;
     }
 }
+@media (max-width: 625px) {
+    .AboutMe--container {
+        flex-direction: column-reverse;
+
+        .info {
+            min-width: 50vw;
+            text-align: center;
+        }
+
+        .icons ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        .avatar {
+            margin-bottom: 10vh;
+            width: 50vw !important;
+            
+            img {
+                width: 50vw !important;
+            }
+        }
+    }
+}
