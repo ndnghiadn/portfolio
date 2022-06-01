@@ -54,11 +54,9 @@ export default function() {
           onEntering={onEnter}
           unmountOnExit
         >
-          <Layout>
-            <div className="content">
-              <AboutMe />
-            </div>
-          </Layout>
+          <div className="content">
+            <AboutMe />
+          </div>
         </CSSTransition>
       </div>
     </>
