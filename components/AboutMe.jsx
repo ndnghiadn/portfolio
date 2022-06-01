@@ -50,7 +50,7 @@ const AboutMe = () => {
     <>
       <div className='AboutMe--container'>
         <div className="info">
-          <h2 ref={(el) => (title = el)} className="title">About Me</h2>
+          <h2 ref={(el) => (title = el)} className="title">About Me 🤗</h2>
           <p ref={(el) => (desc = el)} className="desc">I'm Nghia Nguyen also known as ndnghiadn.<br></br>My goals are to become a full-stack developer, build pratical web and mobile applications.</p>
           <div ref={(el) => (icons = el)} className="icons">
             <ul>

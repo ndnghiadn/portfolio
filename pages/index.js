@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import Head from 'next/head'
 import AboutMe from '../components/AboutMe'
 
-function App() {
+export default function() {
   const onEnter = (node) => {
     gsap.from(
       [node.children[0].firstElementChild, node.children[0].lastElementChild],
@@ -37,7 +37,7 @@ function App() {
   return (
     <>
       <Head>
-        <title>{'<MyPortfolio />'}</title>
+        <title>{'<AboutMe />'}</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
 
@@ -64,5 +64,3 @@ function App() {
     </>
   )
 }
-
-export default App
