@@ -162,7 +162,7 @@ const AboutMe = () => {
                       <Timeline target={
                         <div className="next--page" onClick={handleNextPage}>
                           <p>{'<Education />'}</p>
-                          <AiOutlineArrowRight />
+                            <AiOutlineArrowRight />
                         </div>
                       }>
                         <Tween 

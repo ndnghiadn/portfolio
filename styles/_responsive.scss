@@ -19,14 +19,15 @@
     .arrow-down {
         bottom: 10vh !important;
     }
-
-    .switch {
-        
-    }
     .slider {
         background-color: #fff !important;
         &::before {
             background-color: #999 !important;
+        }
+    }
+    .Education--footer {
+        div {
+            margin-bottom: 10vh !important;
         }
     }
 }
