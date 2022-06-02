@@ -20,6 +20,7 @@
     }
 }
 @media (max-width: 625px) {
+
     .AboutMe--container {
         flex-direction: column-reverse;
 
@@ -41,5 +42,16 @@
                 width: 50vw !important;
             }
         }
+
     }
+    .container__progressbars {
+        padding: 20vh 0 !important;
+    }
+    .progressbar__svg-circle {
+        display: block;
+        width: 80% !important;
+        height: 80% !important;
+    }
+
+    
 }

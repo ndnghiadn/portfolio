@@ -81,7 +81,7 @@ const AboutMe = () => {
                   <div className="sticky">
                     <Timeline totalProgress={progress} paused>
                       <Tween
-                          from={{ x: '10%', top: '10%', opacity: 0.5 }}
+                          from={{ x: '10%', top: '60%', opacity: 0.5 }}
                           to={{ x: '110%', top: '10%', opacity: 1 }}
                       >
                         <div className="animation">
