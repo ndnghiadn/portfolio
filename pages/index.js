@@ -1,6 +1,5 @@
 import { CSSTransition } from 'react-transition-group'
 import { gsap } from 'gsap'
-import Layout from '../components/Layout'
 import Head from 'next/head'
 import AboutMe from '../components/AboutMe'
 
