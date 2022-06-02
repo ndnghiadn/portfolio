@@ -190,16 +190,18 @@
             margin: 0;
             padding: 2vh 3vw;
             transition: 0.5s;
+            border-left: 0.3em solid $main-system-color;
+            border-radius: 2em;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             @include theme() {
                 color: theme-get('text-color');
-                border-left: 0.3em solid theme-get('text-color');
             }
         }
     }
 
 // tech stacks progress
     
-$color-node: hsl(110, 100%, 60%);
+$color-js: hsl(69, 98%, 49%);
 $color-scss: hsl(300, 100%, 60%);
 $color-ts: hsl(220, 100%, 60%);
 $color-react: hsl(180, 100%, 60%);
@@ -211,9 +213,9 @@ $color-vue: hsl(145, 100%, 60%);
 
 //  @keyframes
 
-@keyframes anim_circle-node {
+@keyframes anim_circle-js {
 	to {
-		stroke-dashoffset: strokeDashoffset(60);
+		stroke-dashoffset: strokeDashoffset(85);
 	}
 }
 
@@ -277,8 +279,8 @@ $color-vue: hsl(145, 100%, 60%);
     }
     
     .shadow {
-        &-node {
-            filter: drop-shadow(0 0 5px $color-node);
+        &-js {
+            filter: drop-shadow(0 0 5px $color-js);
         }
         &-scss {
             filter: drop-shadow(0 0 5px $color-scss);
@@ -295,8 +297,8 @@ $color-vue: hsl(145, 100%, 60%);
     }
     
     .circle {
-        &-node {
-            animation: anim_circle-node 1s ease-in-out forwards;
+        &-js {
+            animation: anim_circle-js 1s ease-in-out forwards;
         }
         &-scss {
             animation: anim_circle-scss 1s ease-in-out forwards;
@@ -333,10 +335,6 @@ $color-vue: hsl(145, 100%, 60%);
         cursor: pointer;
         @include theme() {
             color: theme-get('text-color');
-        }
-
-        p {
-            color: $main-system-color;
         }
     }
 }

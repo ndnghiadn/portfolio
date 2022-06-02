@@ -114,9 +114,9 @@ const AboutMe = () => {
 
                         <div className="progressbar">
                           <svg className="progressbar__svg">
-                            <circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-node shadow-node"> </circle>
+                            <circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-js shadow-js"> </circle>
                           </svg>
-                          <span className="progressbar__text shadow-node">Node.js<br></br>60%</span>
+                          <span className="progressbar__text shadow-js">Javascript<br></br>85%</span>
                         </div>
                     
                         <div className="progressbar">
