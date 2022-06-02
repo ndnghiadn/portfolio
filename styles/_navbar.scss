@@ -1,3 +1,4 @@
+@import './mixins';
 
 .navbar {
     display: none;
@@ -20,13 +21,15 @@
 }
 
 .indicator {
+    @include theme() {
+        background-color: theme-get('indicator-bg-color');
+        border: 6px solid theme-get('indicator-border-color');
+    }
     position: absolute;
     top: -50%;
     width: 20vw;
     height: 70px;
-    background: $darkmode-bg-color;
     border-radius: 50%;
-    border: 6px solid $main-bg-color;
     transition: 0.5s;
     
 
@@ -94,7 +97,9 @@
         
         .navbar--list_icon {
             transform: translateY(-35px);
-            color: white;
+            @include theme() {
+                color: theme-get(bg-color);
+            }
         }
         .navbar--list_text {
             opacity: 1;
@@ -113,8 +118,8 @@
     }
     
     .navbar--list_text {
+        color: #fff;
         position: absolute;
-        color: $darkmode-text-color;
         font-weight: 400;
         font-size: 0.75em;
         letter-spacing: 0.05em;

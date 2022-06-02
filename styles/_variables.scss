@@ -10,9 +10,13 @@ $themes: (
   lightTheme: (
     'text-color': $main-text-color,
     'bg-color': $main-bg-color,
+    'indicator-bg-color': $darkmode-bg-color,
+    'indicator-border-color': $main-bg-color,
   ),
   darkTheme: (
     'text-color': $darkmode-text-color,
     'bg-color': $darkmode-bg-color,
+    'indicator-bg-color': $main-bg-color,
+    'indicator-border-color': $darkmode-bg-color,
   ),
 );
