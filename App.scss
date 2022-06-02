@@ -28,7 +28,7 @@ html {
 
 // selection
 ::selection {
-  background-color: #33a3ee;
+  background-color: $main-system-color;
 }
 
 // scrollbar
@@ -41,7 +41,7 @@ html {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #33a3ee;
+  background: $main-system-color;
   border-radius: 100vw;
   border: 0.2em solid #fff;
 }

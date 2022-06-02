@@ -13,6 +13,12 @@
     .inner {
         flex-direction: column;
     }
+    .next--page {
+        bottom: 10vh !important;
+    }
+    .arrow-down {
+        bottom: 10vh !important;
+    }
 }
 @media (min-width: 1024px) {
     .content {

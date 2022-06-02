@@ -1,17 +1,23 @@
 
 import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
-import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineTwitter } from 'react-icons/ai'
+import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineTwitter, AiOutlineArrowRight } from 'react-icons/ai'
 import { Controller, Scene } from 'react-scrollmagic'
 import { Tween, Timeline } from 'react-gsap'
+import { useRouter } from 'next/router'
 
 const AboutMe = () => {
+  const router = useRouter()
 
   let title = useRef(null)
   let desc = useRef(null)
   let image = useRef(null)
   let icons = useRef(null)
   let arrow = useRef(null)
+
+  const handleNextPage = () => {
+    router.push('/education')
+  }
 
   useEffect(() => {
     gsap.registerPlugin(require('gsap/ScrollTrigger'))
@@ -81,8 +87,8 @@ const AboutMe = () => {
                   <div className="sticky">
                     <Timeline totalProgress={progress} paused>
                       <Tween
-                          from={{ x: '10%', top: '60%', opacity: 0.5 }}
-                          to={{ x: '110%', top: '10%', opacity: 1 }}
+                          from={{ x: '10%', top: '20%', opacity: 0.7 }}
+                          to={{ x: '110%', top: '110%', opacity: 1 }}
                       >
                         <div className="animation">
                           <img src="/images/techstack.png" alt="techstacks" />
@@ -96,8 +102,8 @@ const AboutMe = () => {
                         }
                       >
                         <Tween
-                          from={{ opacity: 0 }}
-                          to={{ opacity: 1 }}
+                          from={{ opacity: 0, top: '5%' }}
+                          to={{ opacity: 1, top: '0%' }}
                         />
                         {/* <Tween
                           to={{ x: '110%', opacity: 0 }}  
@@ -110,14 +116,14 @@ const AboutMe = () => {
                           <svg className="progressbar__svg">
                             <circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-node shadow-node"> </circle>
                           </svg>
-                          <span className="progressbar__text shadow-node">Node.js</span>
+                          <span className="progressbar__text shadow-node">Node.js<br></br>60%</span>
                         </div>
                     
                         <div className="progressbar">
                           <svg className="progressbar__svg">
                             <circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-scss shadow-scss"> </circle>
                           </svg>
-                          <span className="progressbar__text shadow-scss">SCSS</span>
+                          <span className="progressbar__text shadow-scss">SCSS<br></br>75%</span>
                         </div>
 
 
@@ -125,7 +131,7 @@ const AboutMe = () => {
                           <svg className="progressbar__svg">
                             <circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-ts shadow-ts"> </circle>
                           </svg>
-                          <span className="progressbar__text shadow-ts">Typescrypt</span>
+                          <span className="progressbar__text shadow-ts">Typescrypt<br></br>60%</span>
                         </div>
 
 
@@ -133,7 +139,7 @@ const AboutMe = () => {
                           <svg className="progressbar__svg">
                             <circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-react shadow-react"> </circle>
                           </svg>
-                          <span className="progressbar__text shadow-react">React</span>
+                          <span className="progressbar__text shadow-react">React<br></br>80%</span>
                         </div>
 
                         
@@ -141,7 +147,7 @@ const AboutMe = () => {
                           <svg className="progressbar__svg">
                             <circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-vue shadow-vue"> </circle>
                           </svg>
-                          <span className="progressbar__text shadow-vue">Vue</span>
+                          <span className="progressbar__text shadow-vue">Vue<br></br>70%</span>
                         </div>
 
 
@@ -152,6 +158,19 @@ const AboutMe = () => {
                           to={{ opacity: 1 }}
                         />
                       </Timeline>
+
+                      <Timeline target={
+                        <div className="next--page" onClick={handleNextPage}>
+                          <p>{'<Education />'}</p>
+                          <AiOutlineArrowRight />
+                        </div>
+                      }>
+                        <Tween 
+                          from={{ opacity: 0, y: 20 }}
+                          to={{ opacity: 1, y: 0 }}
+                        />
+                      </Timeline>
+
                     </Timeline>
                   </div>
                 )}
