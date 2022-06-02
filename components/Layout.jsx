@@ -1,6 +1,7 @@
 import Sidebar from './Sidebar'
 import { useState, useEffect } from 'react'
 import Navbar from './Navbar'
+import SwitchBtn from './SwitchBtn'
 
 const Layout = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -16,9 +17,10 @@ const Layout = ({ children }) => {
 
   return (
     <div className={`inner ${isDarkMode ? 'darkTheme' : 'lightTheme'}`}>
-      <Sidebar className="isDesktop" isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
-      <Navbar className="isMobile"/>
+      <Sidebar className="isDesktop" isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <SwitchBtn className="isMobile" isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       { children }
+      <Navbar className="isMobile"/>
     </div>
   )
 }

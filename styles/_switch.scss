@@ -1,0 +1,51 @@
+@import './mixins';
+
+.switch {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    z-index: 9999;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .slider {
+
+            background-color: $darkmode-bg-color;
+            &::before {
+                transform: translateX(26px);
+            }
+        }
+    }
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $main-bg-color;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+    }
+}

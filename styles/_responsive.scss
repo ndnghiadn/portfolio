@@ -19,6 +19,16 @@
     .arrow-down {
         bottom: 10vh !important;
     }
+
+    .switch {
+        
+    }
+    .slider {
+        background-color: #fff !important;
+        &::before {
+            background-color: #999 !important;
+        }
+    }
 }
 @media (min-width: 1024px) {
     .content {

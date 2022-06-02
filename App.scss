@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Oswald:wght@400;700&display=swap');
 
-@import './styles/mixins';
 @import './styles/libs';
 @import './styles/variables';
 @import './styles/content';
@@ -14,6 +13,7 @@
 @import './styles/career';
 @import './styles/projects';
 @import './styles/contact';
+@import './styles/switch';
 
 * {
   margin: 0;
