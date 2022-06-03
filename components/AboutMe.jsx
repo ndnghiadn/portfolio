@@ -80,7 +80,7 @@ const AboutMe = () => {
             <div>
               <Scene
                 triggerHook="onLeave"
-                duration={2000}
+                duration={3000}
                 pin
               >
                 {(progress) => (

@@ -1,44 +1,60 @@
 import React from 'react'
-import { Chrono } from "react-chrono"
-import items from '../data-json/education-timelines.json'
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
+import items from '../data-json/career-timelines.json'
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai'
 import { useRouter } from 'next/router'
+import { Timeline, Tween } from 'react-gsap'
 
 const Career = () => {
   const router = useRouter()
 
   return (
         <div className="Career--container">
-            <div className="chrono">
-              <Chrono 
-                items={items}
-                disableNavOnKey
-                scrollable={{ scrollbar: 'true' }}
-                theme={{
-                  primary: 'rgb(51, 163, 238)',
-                  secondary: 'goldenrod',
-                  // cardBgColor: 'yellow',
-                  // cardForeColor: 'violet',
-                  // titleColor: 'red',
-                }}
-                fontSizes={{
-                  cardText: '1.2rem',
-                  cardTitle: '1rem',
-                }}
-               />
 
-                <div className="Career--footer">
-                  <div className="next--page" onClick={() => router.push('/education')}>
-                    <p>{'<Education />'}</p>
-                      <AiOutlineArrowLeft />
-                  </div>
-                  <div className="next--page" onClick={() => router.push('/projects')}>
-                    <p>{'<Projects />'}</p>
-                      <AiOutlineArrowRight />
-                  </div>
-                </div>
+              <VerticalTimeline className="Timeline--container">
+                {
+                  items.map((item, index) => (
+                    <VerticalTimelineElement
+                      key={index}
+                      className="vertical-timeline-element--work Timeline--item"
+                      contentStyle={{ background: 'rgb(51, 163, 238)', color: '#fff' }}
+                      iconStyle={{ background: 'rgb(51, 163, 238)', color: '#fff' }}
+                      contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+                      date={item.date}
+                    >
+                      <h3 className="vertical-timeline-element-title">{ item.title }</h3>
+                      <h4 className="vertical-timeline-element-subtitle">{ item.subTitle }</h4>
+                      {
+                        item.desc && (
+                          <p>{ item.desc }</p>
+                        )
+                      }
+                    </VerticalTimelineElement>
+                  ))
+                }
+                <VerticalTimelineElement
+                  iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+                />
+              </VerticalTimeline>
 
-            </div>
+              <Timeline target={
+                        <div className="Career--footer">
+                          <div className="next--page" onClick={() => router.push('/education')}>
+                            <p>{'<Education />'}</p>
+                              <AiOutlineArrowLeft />
+                          </div>
+                          <div className="next--page" onClick={() => router.push('/projects')}>
+                            <p>{'<Projects />'}</p>
+                              <AiOutlineArrowRight />
+                          </div>
+                        </div>
+                      }>
+                        <Tween
+                          from={{ opacity: 0, y: 20 }}
+                          to={{ opacity: 1, y: 0 }}
+                        />
+                </Timeline>
+
         </div>
   )
 }
