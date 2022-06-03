@@ -16,10 +16,11 @@ const Education = () => {
                   items.map((item, index) => (
                     <VerticalTimelineElement
                       key={index}
-                      className="vertical-timeline-element--work Timeline--item"
-                      contentStyle={{ background: 'rgb(51, 163, 238)', color: '#fff' }}
-                      iconStyle={{ background: 'rgb(51, 163, 238)', color: '#fff' }}
+                      className="vertical-timeline-element--work"
+                      contentStyle={{ background: (index + 1) === items.length ? 'goldenrod' : 'rgb(51, 163, 238)', color: '#fff' }}
+                      iconStyle={{ background: (index + 1) === items.length ? 'goldenrod' : 'rgb(51, 163, 238)', color: '#fff' }}
                       contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+                      dateClassName="Timeline--date"
                       date={item.date}
                     >
                       <h3 className="vertical-timeline-element-title">{ item.title }</h3>
@@ -32,9 +33,7 @@ const Education = () => {
                     </VerticalTimelineElement>
                   ))
                 }
-                <VerticalTimelineElement
-                  iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-                />
+
               </VerticalTimeline>
 
               <Timeline target={

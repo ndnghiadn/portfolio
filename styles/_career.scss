@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     @include theme() {
         color: theme-get('text-color');
@@ -15,7 +16,30 @@
     }
 }
 
+.Timeline--container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    overflow: hidden;
+
+    .Timeline--date {
+        @include theme() {
+            color: theme-get('text-color');
+        }
+
+        // no selectable
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none;
+    }
+}
+
 .Career--footer {
+    opacity: 0;
     position: absolute;
     bottom: 0;
     width: 100%;
