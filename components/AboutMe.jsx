@@ -5,6 +5,7 @@ import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineTwitter, AiOutlineArrowRig
 import { Controller, Scene } from 'react-scrollmagic'
 import { Tween, Timeline } from 'react-gsap'
 import { useRouter } from 'next/router'
+import SwitchBtn from './SwitchBtn'
 
 const AboutMe = () => {
   const router = useRouter()
@@ -55,6 +56,7 @@ const AboutMe = () => {
   return (
     <>
       <div className='AboutMe--container'>
+        <SwitchBtn className="isMobile" />
         <div className="info">
           <h2 ref={(el) => (title = el)} className="title">About Me 🤗</h2>
           <p ref={(el) => (desc = el)} className="desc">I'm Nghia Nguyen also known as ndnghiadn.<br></br>My goals are to become a full-stack developer, build pratical web and mobile applications.</p>
