@@ -1,4 +1,5 @@
 
+@import './mixins';
 
 .content {
     flex: 1;
@@ -11,4 +12,7 @@
     position: relative;
     display: block;
     overflow: hidden;
+    @include theme() {
+        background: theme-get('bg-color')
+    }
 }    
