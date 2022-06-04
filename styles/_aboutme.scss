@@ -135,15 +135,13 @@
 }
 
 .sticky, .sticky2 {
-    height: 100vh;
     @include theme() {
         background-color: theme-get('bg-color');
     }
     width: 100%;
-    max-height: 100vh;
+    min-height: 100vh;
     & .animation, .animation2 {
         width: 100%;
-        height: 100%;
         position: absolute;
         & img {
         opacity: 1;

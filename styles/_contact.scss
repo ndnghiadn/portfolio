@@ -1,24 +1,83 @@
+@import './mixins';
 
 .Contact--container {
-    width: 100%;
-    height: 100vh;
-    display: block;
-}
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.st0 {
-    fill:#FFFFFF;
+  @include theme() {
+      color: theme-get('text-color');
+      background-color: theme-get('bg-color');
   }
-  .st1 {
-    fill:transparent;
-    stroke: #000;
-    stroke-width: 2;
+
+  .form {
+    background: url("/images/form-bg.jpg");
+    background-size: cover;
+    width: max(80%, 30vw);
+    padding: 10vh 15vw;
+    box-shadow: 15px 15px 1px goldenrod, 15px 15px 1px 2px rgba(0,0,0,1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include theme() {
+      border: 2px solid theme-get('text-color');
+      box-shadow: 15px 15px 1px goldenrod, 15px 15px 1px 2px theme-get('text-color');
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      height: 5vh;
+      font-size: 1.2em;
+      line-height: 1.2em * 2;
+      font-family: 'Caveat';
+      margin-bottom: 1.2em * 2;
+      border: none;
+      border-bottom: 5px solid $main-system-color;
+      background: #f8f4e5;
+      min-width: 20vw;
+      padding-left: 1em;
+      outline: none;
+
+      &:focus {
+        border-bottom: 5px solid goldenrod;
+      }
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      line-height: 1.2em * 2;
+      padding: 0 20px;
+      background: $main-system-color;
+      letter-spacing: 2px;  
+      transition: .2s all ease-in-out;
+      outline: none;
+      border: 1px solid rgba(0,0,0,1);
+      box-shadow: 3px 3px 1px #2982b9, 3px 3px 1px 1px rgba(0,0,0,1);
+      
+      &:hover {
+        background: goldenrod;
+        color: white;
+        border: 1px solid goldenrod;
+      }
+    }
+
   }
-  .st2 {
-    fill:transparent;
-    stroke: #000;
-    stroke-width: 2;
+
+  .next--page {
+    position: absolute;
+    bottom : 5vh;
+    left: 3vw;
+    font-size: 1em;
+    text-align: left;
+    cursor: pointer;
+    @include theme() {
+        color: theme-get('text-color');
+    }
   }
-  #Layer_1 {
-    height: 100px;
-    text-align: center;
-  }
+}

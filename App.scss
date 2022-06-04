@@ -1,4 +1,5 @@
 
+@import './styles/mixins';
 @import './styles/libs';
 @import './styles/variables';
 @import './styles/content';
@@ -21,6 +22,13 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Oswald', 'Bebas', sans-serif;
+}
+
+body {
+  @include theme() {
+    color: theme-get('text-color');
+    background-color: theme-get('bg-color');
+  }
 }
 
 // selection
