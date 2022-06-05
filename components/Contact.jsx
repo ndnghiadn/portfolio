@@ -8,10 +8,9 @@ import gsap from 'gsap';
 
 const Contact = () => {
   const router = useRouter()
-
   let form = useRef(null)
 
-  const SignupSchema = Yup.object().shape({
+  const SendMailSchema = Yup.object({
     name: Yup.string()
       .min(2, 'Too Short!')
       .max(70, 'Too Long!')
@@ -19,6 +18,10 @@ const Contact = () => {
     email: Yup.string()
       .email('Invalid email')
       .required('Required'),
+    message: Yup.string()
+      .min(10 , 'Too Short!')
+      .max(120, 'Too Long!')
+      .required('Required')
   });
 
   useEffect(() => {
@@ -34,13 +37,11 @@ const Contact = () => {
     <div className="Contact--container">
       
       <Formik
-          initialValues={{ email: '', password: '' }}
-          validateSchema={SignupSchema}
+          initialValues={{ name: '', email: '', message: '' }}
+          validateSchema={SendMailSchema}
           onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
+              window.open(`mailto:ndnghiadn@gmail.com?subject=${values.name + ' from ' + values.email}&body=${values.message}`)
               setSubmitting(false);
-            }, 400);
           }}
         >
           {({
@@ -54,9 +55,33 @@ const Contact = () => {
             /* and other goodies */
           }) => (
             <form ref={(el) => (form = el)} onSubmit={handleSubmit} className="form">
-              <input placeholder='Name' type='text' />
-              <input placeholder='Email' type='email' />
-              <input placeholder='Message' type='text' />
+              <input
+                required
+                placeholder='Name'
+                name="name"
+                type='text'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.name}
+              />
+              <input
+                required
+                placeholder='Email' 
+                name="email"
+                type='email'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.email}
+              />
+              <input
+                required
+                placeholder='Message' 
+                name="message" 
+                type='text'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.message}
+              />
   
               {/* <input
                 type="email"

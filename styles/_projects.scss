@@ -1,0 +1,48 @@
+
+@import './mixins';
+
+.Projects--container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    // @include theme() {
+    //     color: theme-get('text-color');
+    //     background-color: theme-get('bg-color');
+    // } 
+
+    .slider {
+        position: absolute;
+        
+        width: 80%;
+        height: 100%;
+
+        &.item {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+    }
+
+    .Projects--footer {
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1em;
+    
+        div {
+            margin-bottom: 5vh;
+            margin-left: 3vw;
+            cursor: pointer;
+    
+            &:nth-child(2) {
+                text-align: right;
+                margin-right: 3vw;
+            }
+        }
+    }
+}
