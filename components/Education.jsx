@@ -16,7 +16,7 @@ const Education = () => {
                   items.map((item, index) => (
                     <VerticalTimelineElement
                       key={index}
-                      className="vertical-timeline-element--work"
+                      className="vertical-timeline-element--work noselect"
                       contentStyle={{ background: (index + 1) === items.length ? 'goldenrod' : 'rgb(51, 163, 238)', color: '#fff' }}
                       iconStyle={{ background: (index + 1) === items.length ? 'goldenrod' : 'rgb(51, 163, 238)', color: '#fff' }}
                       contentArrowStyle={{ borderRight: '7px solid  #fff' }}

@@ -1,41 +1,26 @@
 import React from 'react'
-import Slider from 'react-slick'
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai'
 import { Timeline, Tween } from 'react-gsap'
 import { useRouter } from 'next/router'
+import { Carousel } from 'react-responsive-carousel'
 
 const Projects = () => {
   const router = useRouter()
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  }
 
   return (
     <div className="Projects--container">
-      <Slider {...settings} className="slider">
-          <div className="item">
-            <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" alt="ABC" />
+        <h1>COMING <span>SOON</span></h1>
+
+        {/* <Carousel autoPlay className="carousel">
+          <div>
+            <img alt="" src="https://filmdaily.co/wp-content/uploads/2020/05/dog-videos-lede-1300x868.jpg" />
+            <p className="legend">Legend 1</p>
           </div>
-          <div className="item">
-            <img src="https://media5.sgp1.digitaloceanspaces.com/wp-content/uploads/2021/10/13142603/Cute-Dog-Wallpapers.jpg" />
+          <div>
+            <img alt="" src="https://www.rd.com/wp-content/uploads/2021/01/GettyImages-588935825.jpg" />
+            <p className="legend">Legend 2</p>
           </div>
-          <div className="item">
-            <h3>3</h3>
-          </div>
-          <div className="item">
-            <h3>4</h3>
-          </div>
-          <div className="item">
-            <h3>5</h3>
-          </div>
-          <div className="item">
-            <h3>6</h3>
-          </div>
-        </Slider>
+        </Carousel> */}
 
         <Timeline target={
             <div className="Projects--footer">

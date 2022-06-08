@@ -9,6 +9,10 @@
 }
 
 @media (max-width: 1023px) {
+
+    .Projects--footer {
+        bottom: 10vh !important;
+    }
     
     .switch {
         display: none !important;

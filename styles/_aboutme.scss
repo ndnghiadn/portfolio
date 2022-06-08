@@ -157,45 +157,7 @@
         }
     }
 
-    .heading {
-        margin-top: 10vh;
-        position: absolute;
-        width: 100%;
-        
-        h2 {
-            background-image: linear-gradient(
-                -225deg,
-                rgb(129, 95, 9) 0%,
-                #33a3ee 29%,
-                #2982b9 67%,
-                #44107a 100%
-            );
-            background-size: auto auto;
-            background-clip: border-box;
-            background-size: 200% auto;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: textclip 7s linear infinite;
-
-
-            display: inline-block;
-            font-size: 2.7em;
-            font-family: 'Caveat', 'Oswald', sans-serif;
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            margin: 0;
-            padding: 2vh 3vw;
-            transition: 0.5s;
-            border-left: 0.3em solid $main-system-color;
-            border-radius: 2em;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            @include theme() {
-                color: theme-get('text-color');
-            }
-        }
-    }
+    
 
 // tech stacks progress
     
@@ -331,6 +293,40 @@ $color-vue: hsl(145, 100%, 60%);
         font-size: 1em;
         text-align: right;
         cursor: pointer;
+        @include theme() {
+            color: theme-get('text-color');
+        }
+    }
+}
+
+.heading {
+    margin-top: 10vh;
+    position: absolute;
+    width: 100%;
+    
+    h2 {
+        background-image: url("/images/techstack-bg.jpg");
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 5s linear infinite;
+
+
+        display: inline-block;
+        font-size: 2.7em;
+        font-family: 'Caveat', 'Oswald', sans-serif;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        margin: 0;
+        padding: 2vh 3vw;
+        transition: 0.5s;
+        border-left: 0.3em solid $main-system-color;
+        border-radius: 2em;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         @include theme() {
             color: theme-get('text-color');
         }

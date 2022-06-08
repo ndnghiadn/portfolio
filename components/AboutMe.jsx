@@ -98,7 +98,7 @@ const AboutMe = () => {
                     </Tween>
                     <Timeline
                       target={
-                        <div className="heading">
+                        <div className="heading noselect">
                           <h2>Tech Stacks</h2>
                         </div>
                       }
