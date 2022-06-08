@@ -4,13 +4,9 @@ import SwitchBtn from "./SwitchBtn";
 
 const Sidebar = ({ isDarkMode, setIsDarkMode, className }) => {
 
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
   return (
     <>
-      <div className={`sidebar ${className}`}>
+      <div className={`sidebar noselect ${className}`}>
         <SwitchBtn isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         <ul>
           {items.map((item, index) => (

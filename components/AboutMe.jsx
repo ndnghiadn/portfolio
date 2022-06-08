@@ -68,8 +68,8 @@ const AboutMe = () => {
             </ul>
           </div>
         </div>
-        <div className="avatar">
-          <img ref={(el) => (image = el)} src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t1.6435-9/118264695_3132829253623812_7602991094953584864_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=174925&_nc_ohc=apw84lawCq8AX_CXek_&_nc_ht=scontent.fsgn2-4.fna&oh=00_AT9vw1YhXjW8z0-I-pxvbSlXU3zGCIzs09rcwvJeU89Eyg&oe=62BB66EE" alt="Avatar" />
+        <div className="avatar noselect">
+          <img ref={(el) => (image = el)} src="/images/avatar01.jpg" alt="Avatar" />
         </div>
         <div ref={(el) => (arrow = el)} className="arrow-down">
           <div class="arrows"></div>
@@ -92,7 +92,7 @@ const AboutMe = () => {
                         from={{ x: '10%', top: '20%', opacity: 0.7 }}
                         to={{ x: '110%', top: '110%', opacity: 1 }}
                     >
-                      <div className="animation">
+                      <div className="animation noselect">
                         <img src="/images/techstack.png" alt="techstacks" />
                       </div>
                     </Tween>

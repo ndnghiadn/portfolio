@@ -6,7 +6,7 @@ const Navbar = ({ className }) => {
   const router = useRouter()
 
   return (
-    <div className={`navbar ${className}`} >
+    <div className={`navbar noselect ${className}`} >
         <ul>
             {
               items.map((item, index) => (
