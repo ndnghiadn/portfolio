@@ -27,7 +27,6 @@ const Contact = () => {
   useEffect(() => {
     const tl = gsap.timeline()
     tl.to([form], {
-      y: '-5vh',
       duration: 1,
       opacity: 1,
     })
@@ -106,7 +105,7 @@ const Contact = () => {
           )}
       </Formik>
      <Timeline target={
-        <div className="next--page" onClick={() => router.push('/projects')}>
+        <div className="next--page noselect" onClick={() => router.push('/projects')}>
           <p>{'<Projects />'}</p>
             <AiOutlineArrowLeft />
         </div>

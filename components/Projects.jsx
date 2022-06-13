@@ -24,11 +24,11 @@ const Projects = () => {
 
         <Timeline target={
             <div className="Projects--footer">
-              <div className="next--page" onClick={() => router.push('/career')}>
+              <div className="next--page noselect" onClick={() => router.push('/career')}>
                 <p>{'<Career />'}</p>
                   <AiOutlineArrowLeft />
               </div>
-              <div className="next--page" onClick={() => router.push('/contact')}>
+              <div className="next--page noselect" onClick={() => router.push('/contact')}>
                 <p>{'<Contact />'}</p>
                   <AiOutlineArrowRight />
               </div>
