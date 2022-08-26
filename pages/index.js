@@ -49,21 +49,21 @@ export default function () {
           nomodule
           src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
         ></script>
-
       </Head>
+
       <div className="container">
-        <CSSTransition
-          in={true}
-          timeout={1200}
-          classNames="page"
-          onExit={onExit}
-          onEntering={onEnter}
-          unmountOnExit
-        >
-          <div className="content">
-            <AboutMe />
-          </div>
-        </CSSTransition>
+          <CSSTransition
+            in={true}
+            timeout={1200}
+            classNames="page"
+            onExit={onExit}
+            onEntering={onEnter}
+            unmountOnExit
+          >
+            <div className="content">
+              <AboutMe />
+            </div>
+          </CSSTransition>
       </div>
     </>
   );

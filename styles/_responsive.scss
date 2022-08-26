@@ -61,6 +61,12 @@
 }
 @media (max-width: 625px) {
 
+    .Contact--container {
+        .form {
+            margin-top: -20%;
+        }
+    }
+
     .AboutMe--container {
         flex-direction: column-reverse;
 

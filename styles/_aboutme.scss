@@ -1,334 +1,333 @@
-@import './mixins';
+@import "./mixins";
 
 .AboutMe--container {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include theme() {
+    color: theme-get("text-color");
+    background-color: theme-get("bg-color");
+  }
+
+  .info {
+    display: block;
     position: relative;
+    width: 30vw;
+  }
+
+  .avatar {
+    width: 30vw;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 10vw;
+    position: relative;
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid #333;
 
-    @include theme() {
-        color: theme-get('text-color');
-        background-color: theme-get('bg-color');
+    img {
+      z-index: 1000000;
+      width: 30vw;
+      border-radius: 50%;
+      opacity: 0;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
+  }
 
-    .info {
-        display: block;
-        position: relative;
-        width: 30vw;
-    }
+  .title {
+    display: block;
+    font-size: 2.7em;
+    opacity: 0;
+  }
 
-    .avatar {
-        width: 30vw;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 10vw;
-        position: relative;
-        border-radius: 50%;
-        padding: 10px;
-        border: 2px solid #333;
+  .desc {
+    display: block;
+    opacity: 0;
+  }
 
-        img {
-            width: 30vw;
-            border-radius: 50%;
-            opacity: 0;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  .icons {
+    font-size: 2em;
+    margin-top: 0.5em;
+    opacity: 0;
+
+    ul {
+      display: flex;
+      list-style: none;
+
+      li {
+        margin: 0 10px;
+
+        a {
+          text-decoration: none;
+          @include theme() {
+            color: theme-get("text-color");
+          }
         }
+      }
     }
-    
+  }
 
-    .title {
-        display: block;
-        font-size: 2.7em;
-        opacity: 0;
+  $size: 1em;
+  $speed: 3s;
+  $peakopacity: 0.7;
+  @keyframes arrows {
+    0% {
+      border-left: $size/3 solid $main-system-color;
+      border-bottom: $size/3 solid $main-system-color;
+      transform: translate($size/-6, $size * 4/-6) rotate(-45deg);
     }
-
-    .desc {
-        display: block;
-        opacity: 0;
+    50% {
+      border-left: $size/3 solid rgba(51, 163, 238, $peakopacity);
+      border-bottom: $size/3 solid rgba(51, 163, 238, $peakopacity);
+      transform: translate($size/-6, 0px) rotate(-45deg);
     }
-
-    .icons {
-        font-size: 2em;
-        margin-top: 0.5em;
-        opacity: 0;
-
-        ul {
-            display: flex;
-            list-style: none;
-
-            li {
-                margin: 0 10px;
-
-                a {
-                    text-decoration: none;
-                    @include theme() {
-                        color: theme-get('text-color');
-                    }
-                }
-            }
-        }
-}
-
-    $size: 1em;
-    $speed: 3s;
-    $peakopacity:0.7;
-    @keyframes arrows {
-        0% {
-            border-left:$size/3 solid $main-system-color;
-            border-bottom:$size/3 solid $main-system-color;
-            transform:translate($size/-6,$size*4/-6)rotate(-45deg) ;
-        }
-        50% {
-            border-left:$size/3 solid rgba(51, 163, 238, $peakopacity);
-            border-bottom:$size/3 solid rgba(51, 163, 238, $peakopacity);
-            transform:translate($size/-6,0px)rotate(-45deg) ;
-        }
-        100% {
-            border-left:$size/3 solid $main-system-color;
-            border-bottom:$size/3 solid $main-system-color;
-            transform:translate($size/-6,$size*4/6)rotate(-45deg) ;
-        }
+    100% {
+      border-left: $size/3 solid $main-system-color;
+      border-bottom: $size/3 solid $main-system-color;
+      transform: translate($size/-6, $size * 4/6) rotate(-45deg);
     }
+  }
 
-    .arrow-down {
+  .arrow-down {
+    position: absolute;
+    bottom: 5vh;
+    display: block;
+    cursor: pointer;
+    opacity: 0;
+
+    .arrows {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $size;
+      height: $size;
+      transform: translate(-50%, -50%);
+
+      &:before {
+        content: "";
         position: absolute;
-        bottom: 5vh;
-        display: block;
-        cursor: pointer;
-        opacity: 0;
+        width: 100%;
+        height: 100%;
+        border-left: $size/3 solid rgba(51, 163, 238, $peakopacity);
+        border-bottom: $size/3 solid rgba(51, 163, 238, $peakopacity);
+        transform: translate($size/3, $size * 4/3) rotate(-45deg);
+        animation: arrows $speed linear infinite;
+      }
 
-        .arrows {
-            position: absolute;
-            top:50%;
-            left:50%;
-            width:$size;
-            height:$size;
-            transform:translate(-50%,-50%);
-
-            &:before {
-                content: '';
-                position: absolute;
-                width:100%;
-                height:100%;
-                border-left:$size/3 solid rgba(51, 163, 238,$peakopacity);
-                border-bottom:$size/3 solid rgba(51, 163, 238,$peakopacity);
-                transform:translate($size/3,$size*4/3)rotate(-45deg);
-                animation: arrows $speed linear infinite;
-            }
-
-            &:after {
-                content: '';
-                position: absolute;
-                width:100%;
-                height:100%;
-                border-left:$size/3 solid rgba(51, 163, 238,$peakopacity);
-                border-bottom:$size/3 solid rgba(51, 163, 238,$peakopacity);
-                transform:translate($size*2/3,0px)rotate(-45deg) ;
-                animation: arrows $speed linear infinite $speed/-2;
-            }
-        }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-left: $size/3 solid rgba(51, 163, 238, $peakopacity);
+        border-bottom: $size/3 solid rgba(51, 163, 238, $peakopacity);
+        transform: translate($size * 2/3, 0px) rotate(-45deg);
+        animation: arrows $speed linear infinite $speed/-2;
+      }
     }
+  }
 }
 
-.sticky, .sticky2 {
-    @include theme() {
-        background-color: theme-get('bg-color');
-    }
+.sticky,
+.sticky2 {
+  @include theme() {
+    background-color: theme-get("bg-color");
+  }
+  width: 100%;
+  min-height: 100vh;
+  & .animation,
+  .animation2 {
     width: 100%;
-    min-height: 100vh;
-    & .animation, .animation2 {
-        width: 100%;
-        position: absolute;
-        & img {
-        opacity: 1;
-        position: absolute;
-        width: 15em;
-        height: 15em;
-        }
+    position: absolute;
+    & img {
+      opacity: 1;
+      position: absolute;
+      width: 15em;
+      height: 15em;
     }
+  }
 
-    @keyframes textclip {
-        to {
-          background-position: 200% center;
-        }
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
     }
+  }
 
-    
+  // tech stacks progress
 
-// tech stacks progress
-    
-$color-js: hsl(69, 98%, 49%);
-$color-scss: hsl(300, 100%, 60%);
-$color-ts: hsl(220, 100%, 60%);
-$color-react: hsl(180, 100%, 60%);
-$color-vue: hsl(145, 100%, 60%);
+  $color-js: hsl(69, 98%, 49%);
+  $color-scss: hsl(300, 100%, 60%);
+  $color-ts: hsl(220, 100%, 60%);
+  $color-react: hsl(180, 100%, 60%);
+  $color-vue: hsl(145, 100%, 60%);
 
-@function strokeDashoffset($num) {
+  @function strokeDashoffset($num) {
     @return 440 - (440 * $num) / 100;
-}
+  }
 
-//  @keyframes
+  //  @keyframes
 
-@keyframes anim_circle-js {
-	to {
-		stroke-dashoffset: strokeDashoffset(85);
-	}
-}
+  @keyframes anim_circle-js {
+    to {
+      stroke-dashoffset: strokeDashoffset(85);
+    }
+  }
 
-@keyframes anim_circle-scss {
-	to {
-		stroke-dashoffset: strokeDashoffset(75);
-	}
-}
-@keyframes anim_circle-ts {
-	to {
-		stroke-dashoffset: strokeDashoffset(60);
-	}
-}
-@keyframes anim_circle-react {
-	to {
-		stroke-dashoffset: strokeDashoffset(80);
-	}
-}
-@keyframes anim_circle-vue {
-	to {
-		stroke-dashoffset: strokeDashoffset(70);
-	}
-}
+  @keyframes anim_circle-scss {
+    to {
+      stroke-dashoffset: strokeDashoffset(75);
+    }
+  }
+  @keyframes anim_circle-ts {
+    to {
+      stroke-dashoffset: strokeDashoffset(60);
+    }
+  }
+  @keyframes anim_circle-react {
+    to {
+      stroke-dashoffset: strokeDashoffset(80);
+    }
+  }
+  @keyframes anim_circle-vue {
+    to {
+      stroke-dashoffset: strokeDashoffset(70);
+    }
+  }
 
-    .container__progressbars {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
-        padding: 30vh 0;
-    }
-    .progressbar {
-        position: relative;
-        width: 11em;
-        height: 11em;
-        transform: rotate(-90deg);
-        text-align: center;
-    }
-    
-    .progressbar__svg {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    
-    .progressbar__svg-circle {
-        width: 100%;
-        height: 100%;
-        fill: none;
-        stroke-width: 10;
-        stroke-dasharray: 440;
-        stroke-dashoffset: 440;
-        stroke-linecap: round;
-        @include theme() {
-            stroke: theme-get('text-color');
-        }
-        transform: translate(5px, 5px); // stroke-width / 2
-    }
-    
-    .shadow {
-        &-js {
-            filter: drop-shadow(0 0 5px $color-js);
-        }
-        &-scss {
-            filter: drop-shadow(0 0 5px $color-scss);
-        }
-        &-ts {
-            filter: drop-shadow(0 0 5px $color-ts);
-        }
-        &-react {
-            filter: drop-shadow(0 0 5px $color-react);
-        }
-        &-vue {
-            filter: drop-shadow(0 0 5px $color-vue);
-        }
-    }
-    
-    .circle {
-        &-js {
-            animation: anim_circle-js 1s ease-in-out forwards;
-        }
-        &-scss {
-            animation: anim_circle-scss 1s ease-in-out forwards;
-        }
-        &-ts {
-            animation: anim_circle-ts 1s ease-in-out forwards;
-        }
-        &-react {
-            animation: anim_circle-react 1s ease-in-out forwards;
-        }
-        &-vue {
-            animation: anim_circle-vue 1s ease-in-out forwards;
-        }
-    }
-    
-    .progressbar__text {
-        @include theme() {
-            color: theme-get('text-color');
-        }
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(90deg);
-        font-family: Arial, Helvetica, sans-serif;
-        border-radius: 0.25em;
-    }
+  .container__progressbars {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 30vh 0;
+  }
+  .progressbar {
+    position: relative;
+    width: 11em;
+    height: 11em;
+    transform: rotate(-90deg);
+    text-align: center;
+  }
 
-    .next--page {
-        position: absolute;
-        bottom : 5vh;
-        right: 3vw;
-        font-size: 1em;
-        text-align: right;
-        cursor: pointer;
-        @include theme() {
-            color: theme-get('text-color');
-        }
+  .progressbar__svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .progressbar__svg-circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 10;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+    @include theme() {
+      stroke: theme-get("text-color");
     }
+    transform: translate(5px, 5px); // stroke-width / 2
+  }
+
+  .shadow {
+    &-js {
+      filter: drop-shadow(0 0 5px $color-js);
+    }
+    &-scss {
+      filter: drop-shadow(0 0 5px $color-scss);
+    }
+    &-ts {
+      filter: drop-shadow(0 0 5px $color-ts);
+    }
+    &-react {
+      filter: drop-shadow(0 0 5px $color-react);
+    }
+    &-vue {
+      filter: drop-shadow(0 0 5px $color-vue);
+    }
+  }
+
+  .circle {
+    &-js {
+      animation: anim_circle-js 1s ease-in-out forwards;
+    }
+    &-scss {
+      animation: anim_circle-scss 1s ease-in-out forwards;
+    }
+    &-ts {
+      animation: anim_circle-ts 1s ease-in-out forwards;
+    }
+    &-react {
+      animation: anim_circle-react 1s ease-in-out forwards;
+    }
+    &-vue {
+      animation: anim_circle-vue 1s ease-in-out forwards;
+    }
+  }
+
+  .progressbar__text {
+    @include theme() {
+      color: theme-get("text-color");
+    }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 0.25em;
+  }
+
+  .next--page {
+    position: absolute;
+    bottom: 5vh;
+    right: 3vw;
+    font-size: 1em;
+    text-align: right;
+    cursor: pointer;
+    @include theme() {
+      color: theme-get("text-color");
+    }
+  }
 }
 
 .heading {
-    margin-top: 10vh;
+  margin-top: 10vh;
+  position: absolute;
+  width: 100%;
+
+  h2 {
+    background-image: url("/images/techstack-bg.jpg");
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 5s linear infinite;
+
+    display: inline-block;
+    font-size: 2.7em;
+    font-family: "Caveat", "Oswald", sans-serif;
     position: absolute;
-    width: 100%;
-    
-    h2 {
-        background-image: url("/images/techstack-bg.jpg");
-        background-size: auto auto;
-        background-clip: border-box;
-        background-size: 200% auto;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: textclip 5s linear infinite;
-
-
-        display: inline-block;
-        font-size: 2.7em;
-        font-family: 'Caveat', 'Oswald', sans-serif;
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        margin: 0;
-        padding: 2vh 3vw;
-        transition: 0.5s;
-        border-left: 0.3em solid $main-system-color;
-        border-radius: 2em;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        @include theme() {
-            color: theme-get('text-color');
-        }
+    top: 10%;
+    left: 10%;
+    margin: 0;
+    padding: 2vh 3vw;
+    transition: 0.5s;
+    border-left: 0.3em solid $main-system-color;
+    border-radius: 2em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @include theme() {
+      color: theme-get("text-color");
     }
+  }
 }
