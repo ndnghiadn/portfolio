@@ -8,7 +8,6 @@ import gsap from 'gsap';
 
 const Contact = () => {
   const router = useRouter()
-  let form = useRef(null)
 
   const SendMailSchema = Yup.object({
     name: Yup.string()
@@ -23,14 +22,6 @@ const Contact = () => {
       .max(120, 'Too Long!')
       .required('Required')
   });
-
-  useEffect(() => {
-    const tl = gsap.timeline()
-    tl.to([form], {
-      duration: 1,
-      opacity: 1,
-    })
-  }, [])
 
   return (
     <div className="Contact--container">
@@ -53,7 +44,7 @@ const Contact = () => {
             isSubmitting,
             /* and other goodies */
           }) => (
-            <form ref={(el) => (form = el)} onSubmit={handleSubmit} className="form">
+            <form onSubmit={handleSubmit} className="form">
               <input
                 required
                 placeholder='Name'
@@ -104,7 +95,7 @@ const Contact = () => {
             </form>
           )}
       </Formik>
-     <Timeline target={
+     {/* <Timeline target={
         <div className="next--page noselect" onClick={() => router.push('/projects')}>
           <p>{'<Projects />'}</p>
             <AiOutlineArrowLeft />
@@ -114,7 +105,7 @@ const Contact = () => {
           from={{ opacity: 0, y: 20 }}
           to={{ opacity: 1, y: 0 }}
         />
-      </Timeline>
+      </Timeline> */}
     </div>
   )
 }

@@ -98,8 +98,10 @@ const AboutMe = () => {
                     </Tween>
                     <Timeline
                       target={
-                        <div className="heading noselect">
+                        <div className="heading">
+                          <div className="bg">
                           <h2>Tech Stacks</h2>
+                          </div>
                         </div>
                       }
                     >
@@ -161,7 +163,7 @@ const AboutMe = () => {
                       />
                     </Timeline>
 
-                    <Timeline target={
+                    {/* <Timeline target={
                       <div className="next--page noselect" onClick={handleNextPage}>
                         <p>{'<Education />'}</p>
                         <AiOutlineArrowRight />
@@ -171,7 +173,7 @@ const AboutMe = () => {
                         from={{ opacity: 0, y: 20 }}
                         to={{ opacity: 1, y: 0 }}
                       />
-                    </Timeline>
+                    </Timeline> */}
 
                   </Timeline>
                 </div>

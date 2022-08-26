@@ -36,7 +36,7 @@ export default function () {
   return (
     <>
       <Head>
-        <title>{"<Career />"}</title>
+      <title>Nghia Nguyen</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
 

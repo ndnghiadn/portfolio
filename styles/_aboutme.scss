@@ -304,16 +304,10 @@
   position: absolute;
   width: 100%;
 
-  h2 {
-    background-image: url("/images/techstack-bg.jpg");
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 5s linear infinite;
-
+  .bg {
+    background-image: url("/images/heading-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: inline-block;
     font-size: 2.7em;
     font-family: "Caveat", "Oswald", sans-serif;
@@ -329,5 +323,16 @@
     @include theme() {
       color: theme-get("text-color");
     }
+  }
+
+  h2 {
+    background-image: url("/images/techstack-bg.jpg");
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 5s linear infinite;
   }
 }

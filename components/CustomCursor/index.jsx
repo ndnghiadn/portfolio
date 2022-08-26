@@ -16,7 +16,7 @@ const CustomCursor = () => {
   });
 
   React.useEffect(() => {
-    document.addEventListener("mousemove", (event) => {
+    function handleMouseMove(event) {
       const { clientX, clientY } = event;
 
       const mouseX = clientX;
@@ -29,10 +29,12 @@ const CustomCursor = () => {
       mainCursor.current.style.transform = `translate3d(${
         mouseX - mainCursor.current.clientWidth / 2
       }px, ${mouseY - mainCursor.current.clientHeight / 2}px, 0)`;
-    });
+    }
+
+    document.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      document.removeEventListener("mousemove");
+      document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 

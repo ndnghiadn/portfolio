@@ -36,7 +36,7 @@ const Education = () => {
 
               </VerticalTimeline>
 
-              <Timeline target={
+              {/* <Timeline target={
                         <div className="Education--footer">
                           <div className="next--page noselect" onClick={() => router.push('/')}>
                             <p>{'<AboutMe />'}</p>
@@ -52,7 +52,7 @@ const Education = () => {
                           from={{ opacity: 0, y: 20 }}
                           to={{ opacity: 1, y: 0 }}
                         />
-                </Timeline>
+                </Timeline> */}
 
         </div>
   )

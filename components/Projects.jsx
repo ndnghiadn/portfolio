@@ -22,7 +22,7 @@ const Projects = () => {
           </div>
         </Carousel> */}
 
-        <Timeline target={
+        {/* <Timeline target={
             <div className="Projects--footer">
               <div className="next--page noselect" onClick={() => router.push('/career')}>
                 <p>{'<Career />'}</p>
@@ -38,7 +38,7 @@ const Projects = () => {
               from={{ opacity: 0, y: 20 }}
               to={{ opacity: 1, y: 0 }}
             />
-          </Timeline>
+          </Timeline> */}
     </div>
   )
 }
