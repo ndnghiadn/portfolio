@@ -38,24 +38,24 @@
     }
 }
 
-.Education--footer {
-    opacity: 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1em;
+// .Education--footer {
+//     opacity: 0;
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     font-size: 1em;
 
-    div {
-        margin-bottom: 5vh;
-        margin-left: 3vw;
-        cursor: pointer;
+//     div {
+//         margin-bottom: 5vh;
+//         margin-left: 3vw;
+//         cursor: pointer;
 
-        &:nth-child(2) {
-            text-align: right;
-            margin-right: 3vw;
-        }
-    }
-}
+//         &:nth-child(2) {
+//             text-align: right;
+//             margin-right: 3vw;
+//         }
+//     }
+// }

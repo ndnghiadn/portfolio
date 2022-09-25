@@ -1,14 +1,15 @@
 [
     {
-        "date": "2016 — 2019",
-        "title": "Phan Chau Trinh High School",
-        "subTitle": "Da Nang City, Vietnam",
-        "desc": ""
-    },
-    {
         "date": "2019 — now",
         "title": "Danang University of Science and Technology",
         "subTitle": "Engineer's degree",
         "desc": "Majors: Information Technology"
+    },
+    {
+        "date": "2016 — 2019",
+        "title": "Phan Chau Trinh High School",
+        "subTitle": "Da Nang, Vietnam",
+        "desc": ""
     }
+    
 ]

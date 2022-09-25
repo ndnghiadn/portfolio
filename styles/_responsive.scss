@@ -23,7 +23,8 @@
   }
 
   .Timeline--container {
-    margin-bottom: 17vh;
+    height: fit-content !important;
+    margin-bottom: 70px;
   }
 
   .isMobile {
@@ -47,14 +48,10 @@
       background-color: #999 !important;
     }
   }
-  .Education--footer {
-    div {
-      margin-bottom: 10vh !important;
-    }
-  }
-  .Career--footer {
-    div {
-      margin-bottom: 10vh !important;
+
+  .Contact--container {
+    .form {
+      margin-top: -20%;
     }
   }
 }
@@ -64,11 +61,6 @@
   }
 }
 @media (max-width: 625px) {
-  .Contact--container {
-    .form {
-      margin-top: -20%;
-    }
-  }
 
   .AboutMe--container {
     flex-direction: column-reverse;

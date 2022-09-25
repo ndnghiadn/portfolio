@@ -1,18 +1,17 @@
-
-@import './styles/mixins';
-@import './styles/libs';
-@import './styles/variables';
-@import './styles/content';
-@import './styles/sidebar';
-@import './styles/responsive';
-@import './styles/navbar';
-@import './styles/aboutme';
-@import './styles/education';
-@import './styles/career';
-@import './styles/projects';
-@import './styles/contact';
-@import './styles/switch';
-@import './styles/CustomCursor.scss';
+@import "./styles/mixins";
+@import "./styles/libs";
+@import "./styles/variables";
+@import "./styles/content";
+@import "./styles/sidebar";
+@import "./styles/responsive";
+@import "./styles/navbar";
+@import "./styles/aboutme";
+@import "./styles/education";
+@import "./styles/career";
+@import "./styles/projects";
+@import "./styles/contact";
+@import "./styles/switch";
+@import "./styles/CustomCursor";
 
 * {
   margin: 0;
@@ -22,13 +21,13 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Oswald', 'Bebas', sans-serif;
+  font-family: "Oswald", "Bebas", sans-serif;
 }
 
 body {
   @include theme() {
-    color: theme-get('text-color');
-    background-color: theme-get('bg-color');
+    color: theme-get("text-color");
+    background-color: theme-get("bg-color");
   }
 }
 
@@ -39,17 +38,17 @@ body {
 
 // scrollbar
 ::-webkit-scrollbar {
-  width: 1em;
+  width: 0.75em;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: goldenrod;
+  background-color: #ccc;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: $main-system-color;
   border-radius: 100vw;
-  border: 0.2em solid #fff;
+  border: 0.2em solid #ccc;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
@@ -70,9 +69,9 @@ body {
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }

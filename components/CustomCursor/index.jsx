@@ -64,9 +64,8 @@ const CustomCursor = () => {
   };
 
   React.useEffect(() => {
-    if (secondaryCursor && positionRef) {
-      followMouse();
-    }
+    if (!secondaryCursor || !positionRef) return;
+    followMouse();
   }, []);
   return (
     <div className={`cursor-wrapper ${type}`}>
