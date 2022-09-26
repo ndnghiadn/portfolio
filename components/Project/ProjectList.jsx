@@ -2,7 +2,6 @@ import React from 'react'
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai'
 import { Timeline, Tween } from 'react-gsap'
 import { useRouter } from 'next/router'
-import { Carousel } from 'react-responsive-carousel'
 
 const Projects = () => {
   const router = useRouter()

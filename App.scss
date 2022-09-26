@@ -12,6 +12,11 @@
 @import "./styles/contact";
 @import "./styles/switch";
 @import "./styles/CustomCursor";
+@import "./styles/project";
+@import "./styles/banner";
+@import "./styles/header";
+@import "./styles/loader";
+@import "./styles/marquee";
 
 * {
   margin: 0;
@@ -29,6 +34,11 @@ body {
     color: theme-get("text-color");
     background-color: theme-get("bg-color");
   }
+}
+
+body.loading {
+  overflow: hidden !important;
+  height: 100vh !important;
 }
 
 // selection

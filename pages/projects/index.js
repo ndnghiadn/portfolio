@@ -1,7 +1,7 @@
 import { CSSTransition } from "react-transition-group";
 import { gsap } from "gsap";
 import Head from "next/head";
-import Projects from "../components/Projects";
+import ProjectList from "../../components/Project/ProjectList";
 
 export default function () {
   const onEnter = (node) => {
@@ -60,7 +60,7 @@ export default function () {
           unmountOnExit
         >
           <div className="content">
-            <Projects />
+            <ProjectList />
           </div>
         </CSSTransition>
       </div>
