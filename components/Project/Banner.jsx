@@ -32,9 +32,9 @@ const Banner = ({ project }) => {
 
   return (
     <motion.div className="banner" variants={banner}>
-      <BannerRowTop title={"project"} />
-      <BannerRowCenter title={"youtube"} playMarquee={playMarquee} />
-      <BannerRowBottom title={"clone"} />
+      <BannerRowTop title={"project"} desc={project.description} />
+      <BannerRowCenter title={project.title} playMarquee={playMarquee} />
+      <BannerRowBottom title={" "} createdIn={project.createdIn} />
     </motion.div>
   );
 };
@@ -57,7 +57,7 @@ const AnimatedLetters = ({ title, disabled }) => (
   </motion.span>
 );
 
-const BannerRowTop = ({ title }) => {
+const BannerRowTop = ({ title, desc }) => {
   return (
     <div className={"banner-row"}>
       <div className="row-col">
@@ -74,15 +74,14 @@ const BannerRowTop = ({ title }) => {
         className="row-col"
       >
         <span className="row-message">
-          We are specialised in setting up the foundation of your brand and
-          setting you up for success.
+          { desc }
         </span>
       </motion.div>
     </div>
   );
 };
 
-const BannerRowBottom = ({ title }) => {
+const BannerRowBottom = ({ title, createdIn }) => {
   return (
     <div className={"banner-row center"}>
       <motion.div
@@ -111,7 +110,7 @@ const BannerRowBottom = ({ title }) => {
             delay: 1.8,
           }}
         >
-          in 2022
+          in {createdIn}
         </motion.span>
       </motion.div>
       <AnimatedLetters title={title} />
