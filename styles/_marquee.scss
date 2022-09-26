@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
 $move-initial: calc(-25%);
 $move-final: calc(-50%);
 
@@ -8,6 +10,7 @@ $move-final: calc(-50%);
     animation-play-state: running;
   }
   .marquee__inner {
+    font-family: "Dancing Script", cursive;
     width: fit-content;
     display: flex;
     position: relative;

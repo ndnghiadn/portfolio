@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Youtube Clone",
+    "slug": "youtube-clone",
+    "subTitle": "with ReactJS, NodeJS, MongoDB",
+    "description": "Lorem ipsum",
+    "live": "https://www.google.com/",
+    "createdIn": 2022,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png",
+    "images": []
+  },
+  {
+    "title": "Cing Thute",
+    "slug": "cingthute",
+    "subTitle": "with ReactJS, NodeJS, MongoDB",
+    "description": "Lorem ipsum",
+    "live": "google.com",
+    "createdIn": 2021,
+    "logo": "https://images.unsplash.com/photo-1582456891925-a53965520520?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y3V0ZSUyMGRvZ3xlbnwwfHwwfHw%3D&w=1000&q=80",
+    "images": []
+  }
+]

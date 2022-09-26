@@ -21,7 +21,7 @@ const letterAni = {
   },
 };
 
-const Banner = () => {
+const Banner = ({ project }) => {
   const [playMarquee, setPlayMarquee] = useState(false);
 
   useEffect(() => {
@@ -29,6 +29,7 @@ const Banner = () => {
       setPlayMarquee(true);
     }, 2000);
   }, []);
+
   return (
     <motion.div className="banner" variants={banner}>
       <BannerRowTop title={"project"} />
@@ -99,7 +100,7 @@ const BannerRowBottom = ({ title }) => {
             delay: 1.8,
           }}
         >
-          scroll
+          was created
         </motion.span>
         <motion.span
           initial={{ opacity: 0 }}
@@ -110,7 +111,7 @@ const BannerRowBottom = ({ title }) => {
             delay: 1.8,
           }}
         >
-          down
+          in 2022
         </motion.span>
       </motion.div>
       <AnimatedLetters title={title} />

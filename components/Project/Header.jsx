@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { HiArrowLeft } from "react-icons/hi";
 import Link from "next/link";
 
-const Header = () => {
+const Header = ({ link }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: -180 }}
@@ -22,7 +22,7 @@ const Header = () => {
           </div>
         </Link>
         <div className="contact">
-          <a href="/contact">Let's work together</a>
+          <a href={link} target="_blank">Live Preview</a>
         </div>
         <div className="hamburger-menu">
           <span></span>

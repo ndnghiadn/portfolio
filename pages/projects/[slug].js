@@ -1,7 +1,11 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import Project from "../../components/Project/Project";
 
-export default function () {
+export default function ProjectPage() {
+  const router = useRouter();
+  const { slug } = router.query;
+
   return (
     <>
       <Head>
@@ -9,9 +13,8 @@ export default function () {
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <div className="Project--container">
-        <Project />
+        <Project slug={slug} />
       </div>
     </>
   );
