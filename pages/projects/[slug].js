@@ -24,6 +24,11 @@ export default function ProjectPage() {
         <title>Nghia Nguyen</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
+
+        <link
+          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
 
       <div className="Project--container">
