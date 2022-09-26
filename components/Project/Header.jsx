@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { HiArrowLeft } from "react-icons/hi";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -14,7 +16,11 @@ const Header = () => {
       className="header"
     >
       <div className="header-inner">
-        <div className="logo">Ollie</div>
+        <Link href="/projects">
+          <div className="logo">
+            <HiArrowLeft />
+          </div>
+        </Link>
         <div className="contact">
           <a href="/contact">Let's work together</a>
         </div>
