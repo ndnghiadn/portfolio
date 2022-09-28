@@ -45,30 +45,52 @@ const itemMain = {
   },
 };
 
-const Loader = ({ setLoading }) => {
+const Loader = ({ setLoading, project }) => {
   return (
     <motion.div className="loader">
-      <motion.div
-        variants={container}
-        onAnimationComplete={() => setLoading(false)}
-        initial="hidden"
-        animate="show"
-        exit="exit"
-        className="loader-inner"
-      >
-        <ImageBlock variants={item} id="image-1" />
-        <motion.div variants={itemMain} className="transition-image">
-          <motion.img layoutId="main-image-1" src={`/images/image-2.jpg`} />
+      {project && (
+        <motion.div
+          variants={container}
+          onAnimationComplete={() => setLoading(false)}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+          className="loader-inner"
+        >
+          <ImageBlock
+            variants={item}
+            id="image-1"
+            src={`/images/${project.slug}/image-1`}
+          />
+          <motion.div variants={itemMain} className="transition-image">
+            <motion.img
+              layoutId={`main-image`}
+              src={`/images/${project.slug}/image-2.webp`}
+              fallback={`/images/${project.slug}/image-2.jpg`}
+            />
+          </motion.div>
+          <ImageBlock
+            variants={item}
+            id="image-3"
+            src={`/images/${project.slug}/image-3`}
+          />
+          <ImageBlock
+            variants={item}
+            id="image-4"
+            src={`/images/${project.slug}/image-4`}
+          />
+          <ImageBlock
+            variants={item}
+            id="image-5"
+            src={`/images/${project.slug}/image-5`}
+          />
         </motion.div>
-        <ImageBlock variants={item} id="image-3" />
-        <ImageBlock variants={item} id="image-4" />
-        <ImageBlock variants={item} id="image-5" />
-      </motion.div>
+      )}
     </motion.div>
   );
 };
 
-export const ImageBlock = ({ posX, posY, variants, id }) => {
+export const ImageBlock = ({ posX, posY, variants, id, src }) => {
   return (
     <motion.div
       variants={variants}
@@ -78,11 +100,7 @@ export const ImageBlock = ({ posX, posY, variants, id }) => {
         left: `${posX}vw `,
       }}
     >
-      <Image
-        src={`/images/${id}.webp`}
-        fallback={`/images/${id}.jpg`}
-        alt={id}
-      />
+      <Image src={`${src}.webp`} fallback={`${src}.jpg`} alt={id} />
     </motion.div>
   );
 };

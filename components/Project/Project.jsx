@@ -21,7 +21,7 @@ const Project = ({ selectedProject }) => {
       <AnimatePresence>
         {loading ? (
           <motion.div key="loader">
-            <Loader setLoading={setLoading} />
+            <Loader setLoading={setLoading} project={selectedProject} />
           </motion.div>
         ) : (
           <>
@@ -34,8 +34,8 @@ const Project = ({ selectedProject }) => {
                     ease: [0.6, 0.01, -0.05, 0.9],
                     duration: 1.6,
                   }}
-                  src={`/images/image-2.jpg`}
-                  layoutId="main-image-1"
+                  src={`/images/${selectedProject.slug}/image-2.jpg`}
+                  layoutId={`main-image`}
                 />
               </div>
             )}

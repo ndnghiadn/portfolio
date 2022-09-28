@@ -21,7 +21,7 @@ const Card = ({ project }) => {
             <button onClick={() => router.push(`/projects/${project.slug}`)}>
               Visit Page
             </button>
-            <button onClick={() => router.push(project.live)}>Live Preview</button>
+            <button onClick={() => window.open (project.live, '_ blank')}>Live Preview</button>
           </div>
         </div>
       </div>
