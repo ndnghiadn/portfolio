@@ -34,8 +34,9 @@ const Project = ({ selectedProject }) => {
                     ease: [0.6, 0.01, -0.05, 0.9],
                     duration: 1.6,
                   }}
-                  src={`/images/${selectedProject.slug}/image-2.jpg`}
-                  layoutId={`main-image`}
+                  src={`/images/${selectedProject.slug}/image-2.webp`}
+                  fallback={`/images/${selectedProject.slug}/image-2.jpg`}
+                  layoutId={selectedProject.slug}
                 />
               </div>
             )}

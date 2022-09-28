@@ -64,7 +64,7 @@ const Loader = ({ setLoading, project }) => {
           />
           <motion.div variants={itemMain} className="transition-image">
             <motion.img
-              layoutId={`main-image`}
+              layoutId={project.slug}
               src={`/images/${project.slug}/image-2.webp`}
               fallback={`/images/${project.slug}/image-2.jpg`}
             />
