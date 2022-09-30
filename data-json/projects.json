@@ -1,26 +1,26 @@
 [
   {
-    "title": "Cing Thute1",
-    "slug": "cing-thute1",
+    "title": "Youtube Clone",
+    "slug": "youtube-clone",
     "subTitle": "with ReactJS, NodeJS, MongoDB",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the",
+    "description": "The clone version of Youtube, which is the most popular sharing video platform in 2022.",
     "live": "https://www.example1.com/",
-    "createdIn": 2020,
+    "createdIn": 2022,
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png"
   },
   {
-    "title": "Cing Thute2",
-    "slug": "cing-thute2",
-    "subTitle": "with NextJS, TailwindCSS, Firebase",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the",
-    "live": "https://www.example1.com/",
-    "createdIn": 2021,
-    "logo": "https://images.unsplash.com/photo-1582456891925-a53965520520?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y3V0ZSUyMGRvZ3xlbnwwfHwwfHw%3D&w=1000&q=80"
+    "title": "Flip Quick",
+    "slug": "flip-quick",
+    "subTitle": "with ReactJS, AWS",
+    "description": "The multiplayer game with memory and quickness. Accessiable on Mobile view.",
+    "live": "https://www.flipquick.asia/",
+    "createdIn": 2022,
+    "logo": "https://flipquick.netlify.app/favicon.ico"
   },
   {
     "title": "Cing Thute3",
     "slug": "cing-thute3",
-    "subTitle": "with Solidity, web3",
+    "subTitle": "with NextJS, tailwindcss, Firebase",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the",
     "live": "https://www.example1.com/",
     "createdIn": 2021,
