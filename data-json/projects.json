@@ -11,19 +11,19 @@
   {
     "title": "Flip Quick",
     "slug": "flip-quick",
-    "subTitle": "with ReactJS, AWS",
+    "subTitle": "with ReactJS, NodeJS, MongoDB",
     "description": "The multiplayer game with memory and quickness. Accessiable on Mobile view.",
     "live": "https://www.flipquick.asia/",
     "createdIn": 2022,
     "logo": "https://flipquick.netlify.app/favicon.ico"
   },
   {
-    "title": "Cing Thute3",
-    "slug": "cing-thute3",
-    "subTitle": "with NextJS, tailwindcss, Firebase",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the",
+    "title": "ATHENS RP",
+    "slug": "athensrp",
+    "subTitle": "with Pawn, C#, NextJS, AWS",
+    "description": "GTASA roleplay server, for Vietnamese, available on both Windows & Mobile. World game logic, gameplay, Discord forum, Launcher, Landing page is all what I've done in this project.",
     "live": "https://www.example1.com/",
-    "createdIn": 2021,
+    "createdIn": 2022,
     "logo": "https://www.cats.org.uk/media/5250/cat-3677527_1920-web.jpg?width=415&height=415"
   },
   {
