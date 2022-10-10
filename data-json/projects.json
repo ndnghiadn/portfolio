@@ -2,7 +2,7 @@
   {
     "title": "Youtube Clone",
     "slug": "youtube-clone",
-    "subTitle": "with ReactJS, NodeJS, MongoDB",
+    "subTitle": "with NextJS, tailwindcss, Firebase",
     "description": "The clone version of Youtube, which is the most popular sharing video platform in 2022.",
     "live": "https://www.example1.com/",
     "createdIn": 2022,
